@@ -95,6 +95,15 @@ public class RestaurantController {
     }
 
     @POST
+    @Path("/searchOpening")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response searchOpening(CommandInput commandInput){
+        List<Restaurant> restaurants = restaurantService.searchOpening(commandInput.getDayTime());
+        return Response.ok(restaurants).build();
+    }
+
+    @POST
     @Path("/searchOpeningNearby")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)

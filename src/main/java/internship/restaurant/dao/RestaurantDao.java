@@ -24,6 +24,8 @@ public interface RestaurantDao {
 
     List<Restaurant> searchByLocation(double latitude, double longitude, double radius);
 
+    List<Restaurant> searchOpening(String time);
+
     List<Restaurant> searchOpeningNearby(double latitude, double longitude, double radius, String time);
 
     List<Restaurant> searchNearbyByNameAndDescription(double latitude, double longitude, double radius, String name, String description);

@@ -104,6 +104,16 @@ public class RestaurantDaoImpl extends AbstractRestaurantDao implements Restaura
         return returnList;
     }
 
+    public List<Restaurant> searchOpening(String time){
+        List<Restaurant> returnList = new ArrayList<>();
+        for (Restaurant restaurant : restaurants) {
+            if (isOpen(time, restaurant)) {
+                returnList.add(restaurant);
+            }
+        }
+        return returnList;
+    }
+
     public List<Restaurant> searchOpeningNearby(double latitude, double longitude, double radius, String time) {
         List<Restaurant> returnList = new ArrayList<>();
         for (Restaurant restaurant : restaurants) {

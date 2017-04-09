@@ -47,6 +47,10 @@ public class RestaurantServiceImpl implements RestaurantService {
         return restaurantDao.searchByLocation(latitude, longitude, radius);
     }
 
+    public List<Restaurant> searchOpening(String time) {
+        return restaurantDao.searchOpening(time);
+    }
+
     public List<Restaurant> searchOpeningNearby(double latitude, double longitude, double radius, String time) {
         return restaurantDao.searchOpeningNearby(latitude, longitude, radius, time);
     }
