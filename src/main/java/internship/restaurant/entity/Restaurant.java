@@ -17,8 +17,8 @@ public class Restaurant {
     String[] friOpeningHour;
     String[] satOpeningHour;
     String[] sunOpeningHour;
-    double latitude;
-    double longitude;
+    Double latitude;
+    Double longitude;
 
     public Restaurant() {
 
@@ -128,11 +128,11 @@ public class Restaurant {
         return sunOpeningHour;
     }
 
-    public double getLatitude() {
+    public Double getLatitude() {
         return latitude;
     }
 
-    public double getLongitude() {
+    public Double getLongitude() {
         return longitude;
     }
 }

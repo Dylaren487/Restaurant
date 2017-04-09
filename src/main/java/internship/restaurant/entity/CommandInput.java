@@ -7,22 +7,22 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CommandInput {
-    double latitude;
-    double longitude;
-    double radius;
+    Double latitude;
+    Double longitude;
+    Double radius;
     String dayTime;
     String name;
     String description;
 
-    public void setLatitude(double latitude) {
+    public void setLatitude(Double latitude) {
         this.latitude = latitude;
     }
 
-    public void setLongitude(double longitude) {
+    public void setLongitude(Double longitude) {
         this.longitude = longitude;
     }
 
-    public void setRadius(double radius) {
+    public void setRadius(Double radius) {
         this.radius = radius;
     }
 
@@ -38,16 +38,16 @@ public class CommandInput {
         this.description = description;
     }
 
-    public double getLatitude() {
+    public Double getLatitude() {
 
         return latitude;
     }
 
-    public double getLongitude() {
+    public Double getLongitude() {
         return longitude;
     }
 
-    public double getRadius() {
+    public Double getRadius() {
         return radius;
     }
 
@@ -63,7 +63,7 @@ public class CommandInput {
         return description;
     }
 
-    public CommandInput(double latitude, double longitude, double radius, String dayTime, String name, String description) {
+    public CommandInput(Double latitude, Double longitude, Double radius, String dayTime, String name, String description) {
 
         this.latitude = latitude;
         this.longitude = longitude;
